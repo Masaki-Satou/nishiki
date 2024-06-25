@@ -1,0 +1,135 @@
+@use "../globals" as *;
+@use "../parts/common" as *;
+
+.calendar__wrapper{
+
+    margin: 0 auto;
+    color: black;
+
+    .cheader {
+        text-align: center;
+        margin: 1rem;
+        @extend .font-lr;
+    }
+    .calendar {
+        text-align: center;
+        width: 100%;
+        
+        margin-bottom:2em;
+        table {
+            background-color: rgba(255,255,255,0.8);
+            // outline: 2px solid #b6b6b6;
+            // border:solid 1px #b6b6b6;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        // th {
+        //     color: #767676;
+        // }
+        th, td {
+            // outline: 1px solid #b6b6b6;
+            border:solid 1px black;
+            // padding-top: 1vw;
+            // padding-bottom: 1vw;
+            height:50px;
+            @include mq(md){
+                height:60px;
+            }
+            text-align: center;
+            a{
+                display:flex;
+                height:100%;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        /*日曜日*/
+        th:first-child {
+            color: red;
+        }
+        td:first-child {
+            color: red;
+            background-color: rgb(253, 241, 238);
+        }
+        /*土曜日*/
+        th:last-child {
+            color: blue;
+        }
+        td:last-child {
+            color: blue;
+            background-color: rgb(235, 238, 250);
+        }
+        /*前後月の日付*/
+        td.disabled {
+            color: #ccc;
+            background-color: transparent;
+            user-select: none;
+        }
+
+        td{
+            :not(.disabled){
+                &:hover{
+                    outline:solid 2px rgb(0, 0, 0);
+                }
+            }
+        }
+        td.pri{
+            background-color: aquamarine;
+        }
+        td.self {
+            outline:solid 3px rgb(255, 194, 53);
+            // background-color: #D65E72;
+            // color: #fff;
+            // animation-name:kf-zoom;
+            // animation-duration: 2s;
+            // animation-iteration-count: infinite;
+        }
+        td.other{
+            background-color: #656565;
+        }
+        .holiday{
+            box-shadow: 0 0 2px 2px #B78D4A;
+        }
+
+        /*ボタン*/
+    }
+    .next-prev-button {
+        position: relative;
+    }
+    .next-prev-button button{
+        cursor: pointer;
+        background: #B78D4A;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 1rem;
+        padding: 0.5rem 2rem;
+        margin: 1rem 0;
+        transition:all 0.5s;
+    }
+ 
+    .prev {
+        float: left;
+    }
+    .next {
+        float: right;
+    }
+
+    .confirm{
+        position:fixed;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        z-index:500;
+
+        transition:all 0.5s;
+        opacity:1;
+        &.hidden2{//tailwind の　hidden とかぶってしまうから2をつけている
+            pointer-events: none;
+            opacity:0;
+    }
+
+    }
+    .confirm.hidden{
+        display:none;
+    }
+}

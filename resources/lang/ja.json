@@ -1,0 +1,25 @@
+{
+    "Whoops! Something went wrong.":"下記の項目を参照し、問題のある箇所を確認して下さい。",
+    "Name":"名前",
+    "Confirm Password":"パスワード確認",
+    "Email":"メールアドレス",
+    "Password":"パスワード",
+    "Log in":"ログイン",
+    "Log Out":"ログアウト",
+    "Already registered?":"登録済みの方はこちら",
+    "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.":"パスワードを忘れてしまった方は下記のメールアドレスにリセット用のリンクを送信致します。",
+    "Email Password Reset Link":"リセット用のリンクを送信",
+    "Register":"登録",
+    "Hello!":"いつもご利用ありがとうございます。",
+    "Reset Password":"パスワード再設定",
+    "You are receiving this email because we received a password reset request for your account.":"お客様のアカウントのパスワードリセット要求を受信したため、このEメールを送信致しました。",
+    "This password reset link will expire in :count minutes.": "このリンクの有効期限は、:count 分後までです。",
+    "If you did not request a password reset, no further action is required.":"このメールに心当たりのない場合、無視して下さい。",
+    "Regards":"今後とも宜しくお願い致します。",
+    "The :attribute must contain at least one uppercase and one lowercase letter.":":attributeは、少なくとも大文字と小文字を1つずつ含める必要があります。",
+    "The :attribute must contain at least one letter.":":attributeは、少なくとも1つの文字が含まれていなければなりません。",
+    "The :attribute must contain at least one symbol.":":attributeは、少なくとも1つの記号が含まれていなければなりません。",
+    "The :attribute must contain at least one number.":":attributeは、少なくとも1つの数字が含まれていなければなりません。",
+    "The given :attribute has appeared in a data leak. Please choose a different :attribute.":"この:attributeは過去に漏洩したことのある脆弱な:attributeです。別の:attributeを入力してください。"
+    
+}

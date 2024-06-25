@@ -1,0 +1,188 @@
+@use "../globals" as *;
+
+// body {
+//   font-family: 'Kameron', 'Noto Sans JP', sans-serif;
+// }
+
+img {
+  // max-width: 100%;
+  vertical-align: bottom;
+}
+
+.mt-sm {
+  margin-top: 16px !important;
+}
+
+
+.mt-md {
+  margin-top: 50px !important;
+
+  @include mq(lg) {
+    margin-top: 90px !important;
+  }
+}
+
+.mt-lg {
+  margin-top: 80px !important;
+
+  @include mq(lg) {
+    margin-top: 150px !important;
+  }
+}
+
+
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+
+
+.mb-md {
+  margin-bottom: 50px !important;
+
+  @include mq(lg) {
+    margin-bottom: 90px !important;
+  }
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+
+  @include mq(lg) {
+    margin-bottom: 150px !important;
+  }
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-md {
+  padding-bottom: 48px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+
+  @include mq(lg) {
+    padding-bottom: 150px !important;
+  }
+}
+
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $contentMaxWidth;
+  list-style:disc
+}
+
+.content-width2 {
+  width: 73%;
+  margin: 0 auto;
+  max-width: $contentMaxWidth2;
+}
+
+
+.my_flex {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.purple {
+  color: $cWineRed;
+}
+
+// font
+.font-sm {
+  font-size: 13px;
+
+  @include mq(lg) {
+    font-size: 16px;
+  }
+}
+.font-md {
+  font-size: 17px;
+
+  @include mq(lg) {
+    font-size: 19px;
+  }
+}
+.font-lr {
+  font-size: 19px;
+
+  @include mq(lg) {
+    font-size: 23px;
+  }
+}
+.font-lg {
+  font-size: 25px;
+
+  @include mq(lg) {
+    font-size: 36px;
+  }
+}
+
+.font-xl {
+  font-size: 36px;
+
+  @include mq(lg) {
+    font-size: 46px;
+  }
+}
+
+.font-2xl {
+  font-size: 43px;
+
+  @include mq(lg) {
+    font-size: 60px;
+  }
+}
+
+
+//文字の大きさによってはpaddingで調整しないと文字が切れる時がある
+.font-cutout {
+  color:white;
+  background-image: url("../../images/backfont.webp"); /* 切り抜きたい画像 */
+  background-size: cover;
+  background-clip: text;       /* 画像を文字で切り抜く指定 */
+  -webkit-text-fill-color: transparent;
+  // color: transparent;                  /* 文字色を透明にする */
+  // background: linear-gradient(45deg, #B67B03 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #B67B03 90% 100%);//ゴールド
+  // background: linear-gradient(45deg, #757575 0%, #9E9E9E 45%, #E8E8E8 70%, #9E9E9E 85%, #757575 90% 100%);//シルバー
+}
+
+.border-grad{
+  border-image: linear-gradient(to right, #c21500 0%, #ffc500 100%);
+  border-image-slice: 1;
+}
+
+.company__head,.product__head,.shops__head,.products__head{
+  opacity:0;
+  animation-name: opa;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  
+  height:40vh;
+  @include mq(md){
+      height:70vh;
+  }
+
+  >img{
+    object-position: center top;
+  }
+}
+
+
+@keyframes opa {
+  0%{
+    transform: scale(0.98);
+  }
+  100%{
+    opacity:1;
+    transform: scale(1);
+  }
+}
