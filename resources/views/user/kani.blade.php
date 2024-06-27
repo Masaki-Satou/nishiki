@@ -17,7 +17,7 @@
     <div id="container">
         <div class="inner">
             <div class="img__wrapper">
-                <img src="{{ asset('../images/kani.png') }}" alt="">
+                <img src="{{ asset('../images/kani.webp') }}" alt="">
             </div>
             <p>Discount 50yen!!</p>
             <a class="" href="{{ route('user.use') }}">TAP TO USE UP</a>  
