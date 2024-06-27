@@ -20,7 +20,7 @@
         </div>
         
         @if($toast)
-        <p class="toast">Thank you</p>
+        <p class="toast">Enjoy Japanese Food</p>
         @endif
 
         
