@@ -1,3 +1,16 @@
+//履歴を常に/で書き換える 2024年6月27日現在はミドルウェアで対応
+// window.history.replaceState({}, document.title, "/");
+
+//2秒後にtoastクラスにhidden2(tailwindにhiddenがあるので、2をつけている)を付与
+setTimeout(function(){
+    let toast=document.querySelector(".toast");
+    if(toast){
+        toast.classList.toggle('hidden2');
+    }
+},2000);
+
+
+
 // async function fetchWithDeviceId(url, options = {}) {
 //     const deviceId = localStorage.getItem('device_id') || generateDeviceId();
 //     localStorage.setItem('device_id', deviceId);
@@ -21,17 +34,5 @@
 // fetchWithDeviceId('/')
 //     .then(data => console.log(data))
 //     .catch(error => console.error('Error:', error));
-
-
-//履歴を常に/で書き換える
-window.history.replaceState({}, document.title, "/");
-
-//2秒後にtoastクラスにhidden2(tailwindにhiddenがあるので、2をつけている)を付与
-setTimeout(function(){
-    let toast=document.querySelector(".toast");
-    if(toast){
-        toast.classList.toggle('hidden2');
-    }
-},2000);
 
 

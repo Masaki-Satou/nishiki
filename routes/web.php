@@ -31,7 +31,18 @@ Route::middleware(['device.access'])->group(function () {
 
     Route::get('/sushi', [UserController::class, 'sushi'])
     ->name('sushi');
+    
+    Route::get('/potato', [UserController::class, 'potato'])
+    ->name('potato');
 
+    Route::get('/tume', [UserController::class, 'tume'])
+    ->name('tume');
+    
+    Route::get('/eel', [UserController::class, 'eel'])
+    ->name('eel');
+    
+    Route::get('/meat', [UserController::class, 'meat'])
+    ->name('meat');
 
 });
 

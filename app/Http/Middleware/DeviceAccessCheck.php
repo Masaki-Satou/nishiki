@@ -16,7 +16,6 @@ class DeviceAccessCheck
      */
     public function handle(Request $request, Closure $next)
     {
-
         // $deviceId = $request->header('Device-ID'); // フロントエンドから送信されたデバイスID
 
         // if ($deviceId) {
@@ -32,13 +31,18 @@ class DeviceAccessCheck
         // }
         // dd($request->session());
         
+
+        //このミドルウェアを摘要したページはセッションに'viewed'があれば、特定のページを表示する
         if ($request->session()->has('viewed')) {
             return response()->view('user.onetime');
-            // return response('This page has already been viewed',403);
+            
+        }else{
+
+            //このミドルウェアを摘要したページはキャッシュしない（戻るボタンで戻って表示されない）javascriptのhistory.replaceState({}, document.title, "/");の方が簡単か
+            return $next($request)->header('Cache-Control', 'no-cache, no-store, must-revalidate')
+            ->header('Pragma', 'no-cache')
+            ->header('Expires', '0');;
         }
         
-       
-
-        return $next($request);
     }
 }

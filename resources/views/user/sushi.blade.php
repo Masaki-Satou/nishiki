@@ -20,7 +20,7 @@
                 <img src="{{ asset('../images/sushi.png') }}" alt="">
             </div>
             <p>Discount 100yen!!</p>
-            <a class="" href="{{ route('user.use') }}">TAP <br> TO USE UP</a>  
+            <a class="" href="{{ route('user.use') }}">TAP TO USE UP</a>  
         </div>
     </div>
 

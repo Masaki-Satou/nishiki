@@ -17,7 +17,7 @@
     <div id="container">
         <div class="inner">
             <div class="img__wrapper">
-                <img src="{{ asset('../images/karaage.png') }}" alt="">
+                <img src="{{ asset('../images/tume.png') }}" alt="">
             </div>
             <p>Plus 1piece!!</p>
             <a class="" href="{{ route('user.use') }}">TAP TO USE UP</a>  
