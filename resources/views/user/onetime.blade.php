@@ -16,7 +16,7 @@
        
     <div id="container" class="">
         <div class="inner">
-            <div class="">This page has<br>already been viewed</div>
+            <div class="p-2">This page has<br>already been viewed</div>
         </div>
        
     </div>
