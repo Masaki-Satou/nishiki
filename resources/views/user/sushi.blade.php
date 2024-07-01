@@ -19,7 +19,7 @@
             <div class="img__wrapper">
                 <img src="{{ asset('../images/sushi.webp') }}" alt="">
             </div>
-            <p>Discount 100yen!!</p>
+            <p>Discount 200yen!!</p>
             <a class="" href="{{ route('user.use') }}">TAP TO USE UP</a>  
         </div>
     </div>
