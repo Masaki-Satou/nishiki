@@ -1,6 +1,8 @@
 //履歴を常に/で書き換える 2024年6月27日現在はミドルウェアで対応
 // window.history.replaceState({}, document.title, "/");
 
+
+
 //2秒後にtoastクラスにhidden2(tailwindにhiddenがあるので、2をつけている)を付与
 setTimeout(function(){
     let toast=document.querySelector(".toast");

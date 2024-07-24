@@ -37,7 +37,6 @@ class DeviceAccessCheck
             return response()->view('user.onetime');
             
         }else{
-
             //このミドルウェアを摘要したページはキャッシュしない（戻るボタンで戻って表示されない）javascriptのhistory.replaceState({}, document.title, "/");の方が簡単か
             return $next($request)->header('Cache-Control', 'no-cache, no-store, must-revalidate')
             ->header('Pragma', 'no-cache')

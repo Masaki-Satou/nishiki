@@ -1,0 +1,38 @@
+@use "../globals" as *;
+@use "../parts/common" as *;
+
+.onecup{
+
+    height:100vh;
+    background-color: white;
+    
+    &__inner{
+        height:100%;
+        max-width:450px;
+        @extend .content-width;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .record{
+            flex-grow: 1;
+            border:1px solid black;
+            border-radius: 10px;
+            width:100%;
+            padding-inline:0.5em;
+            overflow-y:scroll;
+            
+            table{
+                font-size:0.8em;
+                width:100%;
+                tr{
+                    border-bottom:solid 1px black;
+                    td{
+                        padding-top:1em;
+                    }
+                }
+            }
+        }
+    }  
+
+}

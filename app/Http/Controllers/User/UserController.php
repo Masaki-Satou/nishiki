@@ -6,12 +6,44 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\User;
+use App\Models\Onecup;
 
 
 class UserController extends Controller
 {
 
 
+    public function onecup(){
+        $onecups=Onecup::orderby('id','desc')->get()   ;
+        // dd($onecups);
+        return view('user.onecup',compact('onecups'));
+    }
+
+    public function onecupEntry(Request $request){
+        
+        // if ($request->session()->has('form_submitted')) {
+        //     return redirect()->back();
+        // }else{
+        //     $request->session()->put('form_submitted', true);
+        // }
+        
+
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:30',
+            'quantity' => 'required|integer',
+        ]);
+
+        $onecut=Onecup::create([
+            'name'=>$request->name,
+            'quantity'=>$request->quantity,
+        ]);
+        
+        // $request->session()->forget('form_submitted');
+    
+        return back();
+    }
+
+    
     public function welcome(Request $request){
         return view('user.welcome')->with('toast',$request->session()->get('toast'));
     }

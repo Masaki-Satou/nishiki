@@ -21,6 +21,12 @@ Route::get('/', [UserController::class, 'welcome'])
 Route::get('/use', [UserController::class, 'use'])
 ->name('use');
 
+Route::get('/onecup', [UserController::class, 'onecup'])
+->name('onecup');
+
+Route::post('/onecupEntry', [UserController::class, 'onecupEntry'])
+->name('onecupEntry');
+
 
 Route::middleware(['device.access'])->group(function () {
     Route::get('/kani', [UserController::class, 'kani'])
