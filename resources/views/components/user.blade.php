@@ -66,7 +66,7 @@
         <style>
             body{
                 font-family: 'Zen Antique', serif;
-                overflow: hidden;
+                overflow-x: hidden;
                 background-color: white;
                 background-image: url('../../images/back.webp');
                 /* background-image: url('../../images/awaji.png'); */
