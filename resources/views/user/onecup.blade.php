@@ -27,12 +27,12 @@
                 @csrf
                     <div>
                         <x-label for="name" value="実施者（複数名で行っている場合は1時間前後関わった場合はサブの氏名も記載）" />
-                        <x-input placeholder="例：庄司、佐藤、田中" id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                        <x-input type="text" placeholder="例：庄司、佐藤、田中" id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
                     </div>
         
                     <div class="mt-4">
                         <x-label for="quantity" value="杯数" />
-                        <x-input id="quantity" class="block mt-1 w-full" type="text" name="quantity" :value="old('quantity')" required />
+                        <x-input type="number" id="quantity" class="block mt-1 w-full" type="text" name="quantity" :value="old('quantity')" required />
                     </div>
 
                     <div class="flex items-center justify-center mt-4">
