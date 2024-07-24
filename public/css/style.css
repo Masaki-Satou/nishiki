@@ -863,7 +863,7 @@ img {
 }
 
 .onecup {
-  height: 100dvh;
+  height: 100%;
   background-color: white;
 }
 .onecup__inner {
