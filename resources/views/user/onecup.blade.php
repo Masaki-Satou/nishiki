@@ -75,7 +75,6 @@
     //2重送信の防止策
     btnEl=document.querySelector('.submitbutton');
     form=document.querySelector('.onecut-form');
-    // btnEl.disabled = true;
     btnEl.addEventListener('click',function(e){
         
         //clickイベントはフォームのネイティブな検証をスキップしてしてしまうので、実装
