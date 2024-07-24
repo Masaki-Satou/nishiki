@@ -71,6 +71,7 @@
                 background-image: url('../../images/back.webp');
                 /* background-image: url('../../images/awaji.png'); */
                 background-size: cover;
+                height:vh;
                 height:dvh;
             }
         </style>
