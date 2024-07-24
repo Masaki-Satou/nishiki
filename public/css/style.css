@@ -882,6 +882,8 @@ img {
   overflow-y: scroll;
 }
 .onecup__inner .record table {
+  text-align: start;
+  font-size: 0.8em;
   width: 100%;
 }
 .onecup__inner .record table tr {
