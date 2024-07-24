@@ -60,7 +60,7 @@
 
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}?3">
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}?12">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}?13">
         {{ $css }}
         
         <style>
