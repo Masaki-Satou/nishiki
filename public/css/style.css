@@ -863,7 +863,7 @@ img {
 }
 
 .onecup {
-  height: 100vh;
+  height: 100%;
   background-color: white;
 }
 .onecup__inner {
@@ -882,7 +882,6 @@ img {
   overflow-y: scroll;
 }
 .onecup__inner .record table {
-  font-size: 0.8em;
   width: 100%;
 }
 .onecup__inner .record table tr {
