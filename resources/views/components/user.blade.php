@@ -60,7 +60,7 @@
 
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}?3">
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}?11">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}?12">
         {{ $css }}
         
         <style>
@@ -72,7 +72,7 @@
                 /* background-image: url('../../images/awaji.png'); */
                 background-size: cover;
                 height:100vh;
-                height:100dvh;
+                /* height:100dvh; */
             }
         </style>
 
