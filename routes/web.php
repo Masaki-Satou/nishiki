@@ -25,7 +25,7 @@ Route::get('/onecup', [UserController::class, 'onecup'])
 ->name('onecup');
 
 Route::post('/onecupEntry', [UserController::class, 'onecupEntry'])
-->name('onecupEntry');
+->middleware('disable.session')->name('onecupEntry');
 
 
 Route::middleware(['device.access'])->group(function () {
