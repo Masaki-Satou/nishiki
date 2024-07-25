@@ -56,13 +56,8 @@
                 <table>
                     @foreach($onecups as $onecup)
                     
-                    @php
-                    $myFlag='no';
-                     if($onecup->created_at->format('d') % 2 === 0){
-                        $myFlag='yes';
-                     }
-                    @endphp
-                    <tr class="{{ $myFlag }}">
+                    
+                    <tr class=@if($onecup->created_at->format('d') % 2 == 0) "yes" @endif>
                         <td>{{ $onecup->created_at->format('Y-m-d H:i') }}</td>
                         <td>{{ $onecup->name }}</td>
                         <td>{{ $onecup->quantity }}</td>
