@@ -886,6 +886,9 @@ img {
   font-size: 0.8em;
   width: 100%;
 }
+.onecup__inner .record table .yes {
+  background-color: rgb(236, 236, 236);
+}
 .onecup__inner .record table tr {
   border-bottom: solid 1px black;
 }

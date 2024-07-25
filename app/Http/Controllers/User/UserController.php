@@ -13,9 +13,16 @@ class UserController extends Controller
 {
 
 
+    public function onecup2(){
+        // dd(request()->session());
+        $onecups=Onecup::orderby('id','desc')->get()   ;
+        // dd("2");
+        return view('user.onecup',compact('onecups'))->with(['message'=>'送信に失敗しました。再度、送信して下さい。']);
+    }
+
     public function onecup(){
         $onecups=Onecup::orderby('id','desc')->get()   ;
-        // dd($onecups);
+        // dd("0");
         return view('user.onecup',compact('onecups'));
     }
 
@@ -40,7 +47,7 @@ class UserController extends Controller
         
         // $request->session()->forget('form_submitted');
     
-        return back();
+        return redirect()->route('user.onecup');
     }
 
     

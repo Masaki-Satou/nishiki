@@ -65,7 +65,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
 
         'device.access' => \App\Http\Middleware\DeviceAccessCheck::class,
-        'disable.session' => \App\Http\Middleware\DisableSession::class,
+        // 'disable.session' => \App\Http\Middleware\DisableSession::class,
         
     ];
 }

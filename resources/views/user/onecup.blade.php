@@ -22,7 +22,8 @@
             <div class="main">
                 
                 <x-auth-validation-errors></x-auth-validation-errors>
-
+              
+                
                 <form class="onecut-form" method="POST" action="{{ route('user.onecupEntry') }}">
                 @csrf
                     <div>
@@ -39,7 +40,13 @@
                         <x-button class="submitbutton ml-4">
                             送信
                         </x-button>
+
+                        
                     </div>
+
+                    @isset($message)
+                    <p class="pb-4 text-center text-lg text-red-500">{{ $message }}</p>
+                    @endisset
 
                 </form>
             </div>
@@ -48,7 +55,14 @@
                 
                 <table>
                     @foreach($onecups as $onecup)
-                    <tr>
+                    
+                    @php
+                    $myFlag='no';
+                     if($onecup->created_at->format('d') % 2 === 0){
+                        $myFlag='yes';
+                     }
+                    @endphp
+                    <tr class="{{ $myFlag }}">
                         <td>{{ $onecup->created_at->format('Y-m-d H:i') }}</td>
                         <td>{{ $onecup->name }}</td>
                         <td>{{ $onecup->quantity }}</td>
