@@ -47,7 +47,8 @@ class Handler extends ExceptionHandler
         }
         // Tokenエラーの時、ログイン画面にリダイレクトする。
         if ($exception instanceof TokenMismatchException) {
-            return redirect(route($url.'.login'));
+            return redirect()->route('user.onecup')->with(['message'=>'送信できませんでした。再度、送信して下さい。']);
+            // return redirect(route($url.'.login'));
         }
 
         return parent::render($request, $exception);

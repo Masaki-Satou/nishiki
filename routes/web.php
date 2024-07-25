@@ -22,15 +22,10 @@ Route::get('/use', [UserController::class, 'use'])
 ->name('use');
 
 
-//session管理から除外
-// Route::middleware(['disable.session'])->group(function(){
-    Route::get('/onecup', [UserController::class, 'onecup'])->name('onecup');
-    Route::post('/onecupEntry', [UserController::class, 'onecupEntry'])->name('onecupEntry');
-// });
 
+Route::get('/onecup', [UserController::class, 'onecup'])->name('onecup');
+Route::post('/onecupEntry', [UserController::class, 'onecupEntry'])->name('onecupEntry');
 
-//なぜかsessionがきれた時にuser.loginにリダイレクトされるので、無理やり設定
-Route::get('/onecup2', [UserController::class, 'onecup2'])->name('login');
 
 //device.accessミドルウェアで、履歴を残さないのと、session()->put()の値が設定されていれば、使用済みページにリダイレクトするようにしている
 Route::middleware(['device.access'])->group(function () {

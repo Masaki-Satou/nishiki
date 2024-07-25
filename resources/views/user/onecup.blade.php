@@ -44,15 +44,13 @@
                         
                     </div>
 
-                    @isset($message)
-                    <p class="pb-4 text-center text-lg text-red-500">{{ $message }}</p>
-                    @endisset
+                    <x-flash-message />
 
                 </form>
             </div>
 
-            <div class="record mt-5 mb-5">
-                
+            <p class="w-full pl-2 pt-2 text-sm">送信履歴</p>
+            <div class="record mb-5">
                 <table>
                     @foreach($onecups as $onecup)
                     

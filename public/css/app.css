@@ -1081,16 +1081,6 @@ select{
 }
 
 
-.mt-11{
-  margin-top: 2.75rem;
-}
-
-
-.mt-10{
-  margin-top: 2.5rem;
-}
-
-
 .block{
   display: block;
 }
@@ -1912,13 +1902,18 @@ select{
 }
 
 
-.pb-0{
-  padding-bottom: 0px;
+.pt-11{
+  padding-top: 2.75rem;
 }
 
 
-.pt-11{
-  padding-top: 2.75rem;
+.pl-2{
+  padding-left: 0.5rem;
+}
+
+
+.pb-0{
+  padding-bottom: 0px;
 }
 
 

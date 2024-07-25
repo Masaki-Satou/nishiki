@@ -13,13 +13,6 @@ class UserController extends Controller
 {
 
 
-    public function onecup2(){
-        // dd(request()->session());
-        $onecups=Onecup::orderby('id','desc')->get()   ;
-        // dd("2");
-        return view('user.onecup',compact('onecups'))->with(['message'=>'送信に失敗しました。再度、送信して下さい。']);
-    }
-
     public function onecup(){
         $onecups=Onecup::orderby('id','desc')->get()   ;
         // dd("0");

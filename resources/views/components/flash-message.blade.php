@@ -1,14 +1,6 @@
-@php
-if(session('status')==="info"){
-    $bgColor="bg-blue-300";
-}elseif(session('status')==="alert"){
-    $bgColor="bg-red-500";
-}
-@endphp
-
 
 @if(session('message'))
-    <div x-data="{ open:true }" x-show="open" class="relative p-4 m-2 text-white text-center {{$bgColor}}">
+    <div x-data="{ open:true }" x-show="open" class="relative p-4 m-2 text-white text-center bg-red-500">
         <div>{{ session('message') }}</div>
 
         <!-- @click.away="open = false"他の場所をクリックしても閉じる -->
